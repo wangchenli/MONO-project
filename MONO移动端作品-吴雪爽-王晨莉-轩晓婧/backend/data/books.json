@@ -1,0 +1,530 @@
+{
+    "books": [
+        {
+            "rating": {
+                "max": 10,
+                "numRaters": 107370,
+                "average": "8.5",
+                "min": 0
+            },
+            "subtitle": "",
+            "author": [
+                "[英] 夏洛蒂·勃朗特"
+            ],
+            "pubdate": "2003-11",
+            "tags": [
+                {
+                    "count": 18156,
+                    "name": "简爱",
+                    "title": "简爱"
+                },
+                {
+                    "count": 17593,
+                    "name": "外国文学",
+                    "title": "外国文学"
+                },
+                {
+                    "count": 11603,
+                    "name": "经典",
+                    "title": "经典"
+                },
+                {
+                    "count": 10747,
+                    "name": "爱情",
+                    "title": "爱情"
+                },
+                {
+                    "count": 10029,
+                    "name": "小说",
+                    "title": "小说"
+                },
+                {
+                    "count": 8591,
+                    "name": "名著",
+                    "title": "名著"
+                },
+                {
+                    "count": 7667,
+                    "name": "英国",
+                    "title": "英国"
+                },
+                {
+                    "count": 6384,
+                    "name": "外国名著",
+                    "title": "外国名著"
+                }
+            ],
+            "origin_title": "Jane Eyre",
+            "image": "https://img3.doubanio.com/mpic/s5924326.jpg",
+            "binding": "平装",
+            "translator": [],
+            "catalog": "\n      ",
+            "pages": "436",
+            "images": {
+                "small": "https://img3.doubanio.com/spic/s5924326.jpg",
+                "large": "https://img3.doubanio.com/lpic/s5924326.jpg",
+                "medium": "https://img3.doubanio.com/mpic/s5924326.jpg"
+            },
+            "alt": "https://book.douban.com/subject/1141406/",
+            "id": "1141406",
+            "publisher": "世界图书出版公司",
+            "isbn10": "750626157X",
+            "isbn13": "9787506261579",
+            "title": "简爱",
+            "url": "https://api.douban.com/v2/book/1141406",
+            "alt_title": "Jane Eyre",
+            "author_intro": "",
+            "summary": "《简爱》是英国女作家夏洛蒂·勃朗特的代表作品。女主人公简爱是一个追赶求平等与自主的知识女性形象，小说以其感人的对于一位“灰姑娘式”人物奋斗史的刻划取胜，《简爱》也是女性文学的代表作品。",
+            "series": {
+                "id": "61",
+                "title": "名著典藏"
+            },
+            "price": "18.00元"
+        },
+        {
+            "rating": {
+                "max": 10,
+                "numRaters": 14324,
+                "average": "8.2",
+                "min": 0
+            },
+            "subtitle": "",
+            "author": [
+                "巴金"
+            ],
+            "pubdate": "1981-09-01",
+            "tags": [
+                {
+                    "count": 3290,
+                    "name": "巴金",
+                    "title": "巴金"
+                },
+                {
+                    "count": 2015,
+                    "name": "中国文学",
+                    "title": "中国文学"
+                },
+                {
+                    "count": 1621,
+                    "name": "小说",
+                    "title": "小说"
+                },
+                {
+                    "count": 998,
+                    "name": "家",
+                    "title": "家"
+                },
+                {
+                    "count": 896,
+                    "name": "经典",
+                    "title": "经典"
+                },
+                {
+                    "count": 678,
+                    "name": "现代文学",
+                    "title": "现代文学"
+                },
+                {
+                    "count": 564,
+                    "name": "中国",
+                    "title": "中国"
+                },
+                {
+                    "count": 525,
+                    "name": "名著",
+                    "title": "名著"
+                }
+            ],
+            "origin_title": "",
+            "image": "https://img1.doubanio.com/mpic/s1107338.jpg",
+            "binding": "精装",
+            "translator": [],
+            "catalog": "《激流》总序\n家\n附录\n呈献给一个人（初版代序）\n初版后记\n五版题记\n关于《家》（十版代序）\n新版后记\n重印后记\n",
+            "pages": "398",
+            "images": {
+                "small": "https://img1.doubanio.com/spic/s1107338.jpg",
+                "large": "https://img1.doubanio.com/lpic/s1107338.jpg",
+                "medium": "https://img1.doubanio.com/mpic/s1107338.jpg"
+            },
+            "alt": "https://book.douban.com/subject/1082522/",
+            "id": "1082522",
+            "publisher": "人民文学出版社",
+            "isbn10": "7020001114",
+            "isbn13": "9787020001118",
+            "title": "家",
+            "url": "https://api.douban.com/v2/book/1082522",
+            "alt_title": "",
+            "author_intro": "",
+            "summary": "巴金原名李尧棠，字芾甘。生于1904年，四川成都人，现代著名作家。他从小生活在一个官僚地主家庭里，目睹了种种丑恶的社会现象。“五四”运动使他打开眼界，树立起反对封建制度，追求新的社会理想的信念。1927年赴法国学习，第二年写成第一部长篇小说《灭亡》。1928年底回国，1931年后积极参加抗日救亡运动，和鲁迅来往密切。鲁迅认为“巴金是一个有热情的有进步思想的作家，在屈指可数的好作家之列的作家。”现为中国作家协会主席。\n    他的主要作品，大都在1927年以后的二十年间写成的。包括长篇小说《爱情三部曲》(《雾》、《雨》、《电》)、《激流三部曲》(《家》、《春》、《秋》)、《抗战三部曲》(又名《火》)，中篇小说《寒夜》、《憩园》，另有一批短篇小说、童话、散文等。\n    《激流三部曲》以五四运动后二十年代初期四川成都地区为背景，描写了在新的革命时期的一个封建大家庭(高家)走向崩溃的历史。作品展开了一个封建官僚家庭生活的全部，无情地揭露了封建地主阶级的腐朽堕落和封建礼教的虚伪残酷。作者塑造了梅、蕙、瑞珏等封建家庭妇女的形象，她们的痛苦与惨死，是对封建婚姻制度和旧礼教的血泪控诉。而鸣凤、倩儿等“下人”的死，则更深刻地揭露了阶级歧视和压迫的社会现实。作品没有停留在暴露这个“家”的罪恶、揭示它必然崩溃的命运上，而进一步描写了以觉慧为代表的觉醒的叛逆的一代。从一个侧面显示出“五四”时期的时代特色，“宣布一个不合理制度的死刑。”\n    巴金作品的最大特色，是文以情生。这一点与曹雪芹十分相似。此外，巴金善于构筑鸿篇巨制，把众多的人物、纷繁的事件精巧地组织起来，情节波澜起伏，层层推进，步步通近高潮。作者还善于描写人物的心理活动，剖析人物灵魂，有深度、有立体感。",
+            "price": "29.00元"
+        },
+        {
+            "rating": {
+                "max": 10,
+                "numRaters": 33654,
+                "average": "7.4",
+                "min": 0
+            },
+            "subtitle": "",
+            "author": [
+                "大冰"
+            ],
+            "pubdate": "2014-9-1",
+            "tags": [
+                {
+                    "count": 7230,
+                    "name": "大冰",
+                    "title": "大冰"
+                },
+                {
+                    "count": 5566,
+                    "name": "旅行",
+                    "title": "旅行"
+                },
+                {
+                    "count": 3934,
+                    "name": "生活",
+                    "title": "生活"
+                },
+                {
+                    "count": 2995,
+                    "name": "感动",
+                    "title": "感动"
+                },
+                {
+                    "count": 2904,
+                    "name": "随笔",
+                    "title": "随笔"
+                },
+                {
+                    "count": 2502,
+                    "name": "治愈",
+                    "title": "治愈"
+                },
+                {
+                    "count": 2451,
+                    "name": "很值得推荐的一本书",
+                    "title": "很值得推荐的一本书"
+                },
+                {
+                    "count": 1984,
+                    "name": "散文随笔",
+                    "title": "散文随笔"
+                }
+            ],
+            "origin_title": "",
+            "image": "https://img3.doubanio.com/mpic/s27466554.jpg",
+            "binding": "平装",
+            "translator": [],
+            "catalog": "乖，摸摸头－004\n我有一碗酒，可以慰风尘－022\n对不起－052\n普通朋友－074\n不许哭－088\n唱歌的人不许掉眼泪－120\n听歌的人不许掉眼泪－156\n一个叫木头，一个叫马尾－182\n椰子姑娘漂流记－210\n风马少年－256\n小因果－268\n我的师弟不是人－314\n后记",
+            "ebook_url": "https://read.douban.com/ebook/7737069/",
+            "pages": "336",
+            "images": {
+                "small": "https://img3.doubanio.com/spic/s27466554.jpg",
+                "large": "https://img3.doubanio.com/lpic/s27466554.jpg",
+                "medium": "https://img3.doubanio.com/mpic/s27466554.jpg"
+            },
+            "alt": "https://book.douban.com/subject/25984204/",
+            "id": "25984204",
+            "publisher": "湖南文艺出版社",
+            "isbn10": "7540468793",
+            "isbn13": "9787540468798",
+            "title": "乖，摸摸头",
+            "url": "https://api.douban.com/v2/book/25984204",
+            "alt_title": "",
+            "author_intro": "大冰，1980年生人、作家、某卫视首席主持人、某高校导师、民谣歌手、老背包客、不敬业的酒吧掌柜、油画科班、手鼓艺人、业余皮匠、业余银匠、业余诗人、资深西藏拉漂、资深丽江混混、黄金左脸、禅宗临济弟子",
+            "summary": "真实的故事自有万钧之力\n这本书讲述了12个真实的故事\n或许会让你看到那些你永远无法去体会的生活\n见识那些可能你永远都无法结交的人\n【乖，摸摸头】：“杂草敏”是一只南方姑娘，辞去了稳定的幼儿园老师工作，跑到济南某电视台，从剪片子做起。后来又离开了山东，蒲公英一样漂去了北京又漂回了南方，甚至还漂到了澳大利亚……\n【我有一碗酒，可以慰风尘】：这是一个关于越战老兵的故事。他将所有用命换来的补贴终身无偿捐献给希望工程、自费组建了第一支民间消防队，从不屑解释也不愿争辩的老兵，心里藏着一个关于铭记与奉献的故事。\n【普通朋友】：每个硬着骨头敢拼敢搏的人都有个柔软的理由。所有人都看到“屌丝男士”大鹏光辉灿烂的现在，而在此之前，他也曾经独自经历过漫长的黑夜。\n【唱歌人不许掉眼泪】：唱歌的人，到底靠什么而活呢？这个故事里，有金三角的连绵雨水，孟定的香蕉园，新千年的建筑工地……故事里有穷困窘迫、颠沛流离、渺茫的希望、忽晴忽雨的前路，还有一把红棉吉他和一个很想唱歌的孩子。\n…… ……\n《乖，摸摸头》是一本让你舍不得读完的短篇故事集。畅销书作者大冰，在《乖，摸摸头》一书中记录了他在拉萨、丽江与大理路上遇到12个人，以及关于他们的爱与温暖的故事。这些人的故事，有的是无畏的奋斗和孤身的寻找，有的是疯狂的爱情和极致的浪漫，有的是你我不曾尝试却跃跃欲试的生活，这些真实的故事，如点点星光，又如支支火把，给所有心怀梦想的年轻人以温暖、以力量、以方向。",
+            "ebook_price": "12.00",
+            "price": "36.00元"
+        },
+        {
+            "rating": {
+                "max": 10,
+                "numRaters": 146693,
+                "average": "8.8",
+                "min": 0
+            },
+            "subtitle": "“地球往事”三部曲之一",
+            "author": [
+                "刘慈欣"
+            ],
+            "pubdate": "2008-1",
+            "tags": [
+                {
+                    "count": 43309,
+                    "name": "科幻",
+                    "title": "科幻"
+                },
+                {
+                    "count": 33489,
+                    "name": "刘慈欣",
+                    "title": "刘慈欣"
+                },
+                {
+                    "count": 22164,
+                    "name": "三体",
+                    "title": "三体"
+                },
+                {
+                    "count": 16761,
+                    "name": "科幻小说",
+                    "title": "科幻小说"
+                },
+                {
+                    "count": 14152,
+                    "name": "中国",
+                    "title": "中国"
+                },
+                {
+                    "count": 12812,
+                    "name": "小说",
+                    "title": "小说"
+                },
+                {
+                    "count": 11254,
+                    "name": "硬科幻",
+                    "title": "硬科幻"
+                },
+                {
+                    "count": 10635,
+                    "name": "中国科幻",
+                    "title": "中国科幻"
+                }
+            ],
+            "origin_title": "",
+            "image": "https://img1.doubanio.com/mpic/s2768378.jpg",
+            "binding": "平装",
+            "translator": [],
+            "catalog": "1.科学边界\n2.台球\n3.射手和农场主\n4.三体、周文王、长夜\n5.叶文洁\n6.宇宙闪烁之一\n7.疯狂年代\n8.寂静的春天\n9.红岸之一\n10.宇宙闪烁之二\n11.大史\n12.三体、墨子、烈焰\n13.红岸之二\n14.红岸之三\n15.红岸之四\n16.三体、哥白尼、宇宙橄榄球、三日凌空\n17.三体问题\n18.三体、牛顿、冯·诺伊曼、秦始皇、三日连珠\n19.聚会\n20.三体、爱因斯坦、单摆、大撕裂\n21.三体、远征\n22.地球叛军\n23.红岸之五\n24.红岸之六\n25.叛乱\n26.雷志成、杨卫宁之死\n27.无人忏悔\n28.伊文斯\n29.第二红岸基地\n30.地球三体运动\n31.两个质子\n32.古筝行动\n33.监听员\n34.智子\n35.虫子\n36.尾声·遗址\n后记",
+            "ebook_url": "https://read.douban.com/ebook/930946/",
+            "pages": "302",
+            "images": {
+                "small": "https://img1.doubanio.com/spic/s2768378.jpg",
+                "large": "https://img1.doubanio.com/lpic/s2768378.jpg",
+                "medium": "https://img1.doubanio.com/mpic/s2768378.jpg"
+            },
+            "alt": "https://book.douban.com/subject/2567698/",
+            "id": "2567698",
+            "publisher": "重庆出版社",
+            "isbn10": "7536692935",
+            "isbn13": "9787536692930",
+            "title": "三体",
+            "url": "https://api.douban.com/v2/book/2567698",
+            "alt_title": "",
+            "author_intro": "刘慈欣，祖籍河南，长于山西，中国科普作家协会会员，山西省作家协会会员，高级工程师。\n自1999年处女作《鲸歌》问世以来，刘慈欣已发表短篇科幻小说三十余篇、出版长篇科幻小说六部，并创下连续八年荣获中国科幻最高奖“银河奖”的纪录。他的长篇作品《三体》开创《科幻世界》月刊连载原创作品的先例，成为2006年度最受关注、最畅销的科幻小说。",
+            "summary": "文化大革命如火如荼进行的同时。军方探寻外星文明的绝秘计划“红岸工程”取得了突破性进展。但在按下发射键的那一刻，历经劫难的叶文洁没有意识到，她彻底改变了人类的命运。地球文明向宇宙发出的第一声啼鸣，以太阳为中心，以光速向宇宙深处飞驰……\n四光年外，“三体文明”正苦苦挣扎——三颗无规则运行的太阳主导下的百余次毁灭与重生逼迫他们逃离母星。而恰在此时。他们接收到了地球发来的信息。在运用超技术锁死地球人的基础科学之后。三体人庞大的宇宙舰队开始向地球进发……\n人类的末日悄然来临。",
+            "ebook_price": "6.00",
+            "series": {
+                "id": "38",
+                "title": "科幻世界·中国科幻基石丛书"
+            },
+            "price": "23.00"
+        },
+        {
+            "rating": {
+                "max": 10,
+                "numRaters": 5,
+                "average": "0.0",
+                "min": 0
+            },
+            "subtitle": "",
+            "author": [
+                "王立"
+            ],
+            "pubdate": "2010-11-1",
+            "tags": [
+                {
+                    "count": 2,
+                    "name": "很不错",
+                    "title": "很不错"
+                },
+                {
+                    "count": 1,
+                    "name": "最后一个道士",
+                    "title": "最后一个道士"
+                },
+                {
+                    "count": 1,
+                    "name": "小说",
+                    "title": "小说"
+                }
+            ],
+            "origin_title": "",
+            "image": "https://img3.doubanio.com/mpic/s28686475.jpg",
+            "binding": "平装",
+            "translator": [],
+            "catalog": "",
+            "pages": "196",
+            "images": {
+                "small": "https://img3.doubanio.com/spic/s28686475.jpg",
+                "large": "https://img3.doubanio.com/lpic/s28686475.jpg",
+                "medium": "https://img3.doubanio.com/mpic/s28686475.jpg"
+            },
+            "alt": "https://book.douban.com/subject/10823285/",
+            "id": "10823285",
+            "publisher": "秀威信息科技",
+            "isbn10": "9862216433",
+            "isbn13": "9789862216439",
+            "title": "最后一个道士－王立短篇小说集",
+            "url": "https://api.douban.com/v2/book/10823285",
+            "alt_title": "",
+            "author_intro": "",
+            "summary": "",
+            "price": "96.00元"
+        },
+        {
+            "rating": {
+                "max": 10,
+                "numRaters": 89,
+                "average": "8.9",
+                "min": 0
+            },
+            "subtitle": "影印版第5版",
+            "author": [
+                "弗拉纳根"
+            ],
+            "pubdate": "2007-6",
+            "tags": [
+                {
+                    "count": 89,
+                    "name": "javascript",
+                    "title": "javascript"
+                },
+                {
+                    "count": 25,
+                    "name": "web",
+                    "title": "web"
+                },
+                {
+                    "count": 20,
+                    "name": "O'Reilly",
+                    "title": "O'Reilly"
+                },
+                {
+                    "count": 15,
+                    "name": "计算机",
+                    "title": "计算机"
+                },
+                {
+                    "count": 11,
+                    "name": "编程",
+                    "title": "编程"
+                },
+                {
+                    "count": 11,
+                    "name": "JavaScript",
+                    "title": "JavaScript"
+                },
+                {
+                    "count": 8,
+                    "name": "互联网",
+                    "title": "互联网"
+                },
+                {
+                    "count": 6,
+                    "name": "oreilly",
+                    "title": "oreilly"
+                }
+            ],
+            "origin_title": "",
+            "image": "https://img3.doubanio.com/mpic/s5865314.jpg",
+            "binding": "平装",
+            "translator": [],
+            "catalog": "",
+            "pages": "994",
+            "images": {
+                "small": "https://img3.doubanio.com/spic/s5865314.jpg",
+                "large": "https://img3.doubanio.com/lpic/s5865314.jpg",
+                "medium": "https://img3.doubanio.com/mpic/s5865314.jpg"
+            },
+            "alt": "https://book.douban.com/subject/2208603/",
+            "id": "2208603",
+            "publisher": "东南大学出版社",
+            "isbn10": "7564107685",
+            "isbn13": "9787564107680",
+            "title": "JavaScript权威指南",
+            "url": "https://api.douban.com/v2/book/2208603",
+            "alt_title": "",
+            "author_intro": "",
+            "summary": "《JavaScript权威指南(影印版)(第5版)》已经经过全面地修订和扩展，涵盖了构建当今Web2.0应用程序所需的JavaScript技术。《JavaScript权威指南(影印版)(第5版)》不仅是一本实例驱动的程序员指南，同时也是一本可以摆在桌边随时查阅的参考手册，它以全新的章节阐述了有效使用Javascript脚本所需要知道的一切，包括：\n脚本化的HTTP和Ajax；XML处理；使用标记的客户端图形；JavaScript的命名空间——编写复杂程序时所必不可少的；嵌入到Java应用程序中的类、闭包、持久层、Flash和JavaScript第一部分详细阐述了JavaScript语言的核心内容。如果你是JavaScript新手，它将教授你这门语言；如果你已经是一个JavaScript程序员，第一部分将能磨练你的技艺并加深你对这门语言的理解。第二部分阐述了在特定浏览器提供的脚本环境下，如何使用JavaScript进行DOM编程。同时运用许多精巧的实例，广泛且深入地阐明了JavaScript如何应用于客户端程序：；为HTML文档生成表格内容；展示DHTML的活力；自动化表单验证；绘制动态饼状统计图；创建可拖曳的HTML元素；为Web应用程序定义键盘快捷键；创建有Ajax特性的工具提示；在Ajax应用中使用XPath和XSLT加载XML文档对象；以及更多第三部分全面介绍了JavaScript语言的核心。讲述了在JavaScript1.5和ECMAScriptversion3中定义的每一个类、对象、构造器、方法、函数、属性和常量。第四部分是关于客户端JavaScript的详细参考，涵盖了遗留的Web浏览器API、标准DOM2API以及新兴的标准,例如XMLHttpRequest对象和标记。",
+            "price": "99.00元"
+        },
+        {
+            "rating": {
+                "max": 10,
+                "numRaters": 36,
+                "average": "8.7",
+                "min": 0
+            },
+            "subtitle": "第三版",
+            "author": [
+                "（美）David Flanagan"
+            ],
+            "pubdate": "2001-7",
+            "tags": [
+                {
+                    "count": 26,
+                    "name": "JavaScript",
+                    "title": "JavaScript"
+                },
+                {
+                    "count": 5,
+                    "name": "前端技术",
+                    "title": "前端技术"
+                },
+                {
+                    "count": 5,
+                    "name": "Web",
+                    "title": "Web"
+                },
+                {
+                    "count": 4,
+                    "name": "JS",
+                    "title": "JS"
+                },
+                {
+                    "count": 3,
+                    "name": "计算机",
+                    "title": "计算机"
+                },
+                {
+                    "count": 3,
+                    "name": "编程",
+                    "title": "编程"
+                },
+                {
+                    "count": 3,
+                    "name": "程序设计",
+                    "title": "程序设计"
+                },
+                {
+                    "count": 3,
+                    "name": "O'Reilly",
+                    "title": "O'Reilly"
+                }
+            ],
+            "origin_title": "",
+            "image": "https://img1.doubanio.com/mpic/s1454707.jpg",
+            "binding": "平装",
+            "translator": [],
+            "catalog": "前言\n第一章  JavaScript绪论\n1. 1  对JavaScript的误解\n1. 2  JavaScript的版本\n1. 3  客户端JavaScript：网页中的可执行内容\n",
+            "pages": "826",
+            "images": {
+                "small": "https://img1.doubanio.com/spic/s1454707.jpg",
+                "large": "https://img1.doubanio.com/lpic/s1454707.jpg",
+                "medium": "https://img1.doubanio.com/mpic/s1454707.jpg"
+            },
+            "alt": "https://book.douban.com/subject/1231579/",
+            "id": "1231579",
+            "publisher": "中国电力出版社",
+            "isbn10": "7508306139",
+            "isbn13": "9787508306131",
+            "title": "JavaScript权威指南",
+            "url": "https://api.douban.com/v2/book/1231579",
+            "alt_title": "",
+            "author_intro": "",
+            "summary": "本书由畅销书《Java in a Nutshell》的作者David Flanagan撰写，是公认的权威JavaScript程序员指南和参考手册。JavaScript是一种功能强大、面向对象、可以直接嵌入HTML页面的脚本语言。JavaScript可以创建动态、交互式、基干Web的应用程序，而且所创建的应用程序可以在Web浏览器中完整地运行——因而，JavaScript是开发DHTML内容的最佳之",
+            "price": "85.00"
+        }
+    ]
+}

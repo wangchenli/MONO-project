@@ -1,0 +1,43 @@
+body {
+  box-sizing: border-box;
+}
+._books {
+  width: 46rem;
+}
+.book_i {
+  margin-top: 1.85185185rem;
+  margin-left: 1.2962963rem;
+  border: 0.14814815rem solid #cccccc;
+  padding: 1.11111111rem 1.11111111rem;
+}
+.book_i dt {
+  width: 14.81481481rem;
+  height: 20rem;
+  margin-bottom: 1.81481481rem;
+  margin-left: 0.74074074rem;
+}
+.book_i dt img {
+  width: 14.81481481rem;
+  height: 20.37037037rem;
+}
+.book_i .details {
+  width: 24.44444444rem;
+  height: 20rem;
+}
+.book_i .title {
+  margin-bottom: 1.11111111rem;
+}
+.book_i h2 {
+  margin-top: 0.51851852rem;
+  font-size: 2.96296296rem;
+  font-family: "微软雅黑";
+  font-weight: 900;
+  color: #494949;
+}
+.book_i .doc p {
+  font-size: 1.66666667rem;
+  font-family: "微软雅黑";
+  color: #666666;
+  line-height: 2.22222222rem;
+  text-align: left;
+}

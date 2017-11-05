@@ -1,0 +1,308 @@
+[
+	{   
+		"id":"1001",
+		"sub_img":"img/1001.png",
+		"column":"MONO日签",
+		"type":"阅读",
+		"link":"点击type跳转的地址",
+		"img_json":{
+			"src":"img/1001.jpg"
+		},
+		"action-bar":{
+			"position": "out",
+			"fabulous":"580",
+			"comment":"82"
+		},
+		"link-data":{//点击MONO日签跳转页面的数据
+			"banner":"img/1101.jpeg",
+			"subTitle":"每日一句，人生即是词典",
+			"list":[
+				{
+					"time":"9小时前",
+					"src":"img/1001.jpg",
+					"fabulous":"580",
+					"comment":"82"
+				},
+				{
+					"time":"一天前",
+					"src":"img/1102.jpg",
+					"fabulous":"600",
+					"comment":"130"
+				},
+				{
+					"time":"2017.10.28",
+					"src":"img/1103.jpg",
+					"fabulous":"580",
+					"comment":"82"
+				}
+				,{
+					"time":"2017.10.27",
+					"src":"img/1004.jpg",
+					"fabulous":"989",
+					"comment":"68"
+				},
+				{
+					"time":"2017.10.26",
+					"src":"img/1004.jpg",
+					"fabulous":"123",
+					"comment":"30"
+				}
+			]
+
+		}
+	},
+	{
+		"id":"2001",
+		"sub_img":"img/2001.png",
+		"column":"单读",
+		"type":"OWSPACE",
+		"link":"点击type跳转的地址",
+		"img_json":{
+			"src":"img/2001.jpg",
+			"image_dir":"不能因为我读书少就骗我。",
+			"dir_position":"bottom",
+			"img_title":"语文课本里这么多假故事  当小学生容易么？",
+			"img_describe":"语文课本还有一个习惯，无论事情是否真实，都爱采取“写实风格”，小学生怎么办，他们很绝望。"
+		},		
+		"action-bar":{
+			"position": "out",
+			"fabulous":"426",
+			"comment":"6"
+		},
+		"link-data":{//点击单读跳转页面的数据
+			"banner":"img/2101.jpeg",
+			"subTitle":"《单独》杂志由单向空间出版，致力于传递世界范围内最值得的文字与作品，并且固执的把它因在纸上，收藏这个时代独特且清晰的声音。",
+			"list":[
+				{
+					"time":"2017.9.30 15:30",
+					"src":"img/2001.jpg",
+					"image_dir":"不能因为我读书少就骗我。",
+					"dir_position":"bottom",
+					"img_title":"语文课本里这么多假故事  当小学生容易么？",
+					"img_describe":"语文课本还有一个习惯，无论事情是否真实，都爱采取“写实风格”，小学生怎么办，他们很绝望。",
+					"fabulous":"426",
+					"comment":"6"
+				},
+				{
+					"time":"2017.9.30 15:25",
+					"src":"img/2102.jpg",
+					"image_dir":"不能因为我读书少就骗我。",
+					"dir_position":"bottom",
+					"img_title":"1000亿元投入达摩院：马云到底想干什么",
+					"img_describe":"“干嘛一定要研究院、实验室这样的说法，干嘛不能创造一个自己的名字，我觉得达摩院就很好。”",
+					"fabulous":"1302",
+					"comment":"9000"
+				},
+				{
+					"time":"2017.9.30 14:50",
+					"src":"img/2103.jpg",
+					"image_dir":"当考研遇上国庆假期 青岛高校学生太拼了",
+					"dir_position":"bottom",
+					"img_title":"当考研遇上国庆假期 青岛高校学生太拼了",
+					"img_describe":"国庆中秋小长假期间，青岛高校许多大学生选择出游放松或者回家过节。然而，有一群人却选择留在校园，为梦想而默默坚守。他们，就是即将参加2018研究生入学考试的考研人。距离考研只有75天了，青岛观摄影师走进青岛大学，拍摄了这组照片。",
+					"fabulous":"150",
+					"comment":"92"
+				},
+				{
+					"time":"2017.9.30 14:30",
+					"src":"img/2104.jpg",
+					"image_dir":"乔治小王子要上学了 王妃为他选了这所小学 ",
+					"dir_position":"bottom",
+					"img_title":"乔治小王子要上学了 王妃为他选了这所小学 ",
+					"img_describe":"又是一年开学季英国肯辛顿宫宣布，王位第3顺位继承人乔治小王子（Prince George），将在父母威廉王子和凯特的陪同下开始小学生活，并独自从校门口大闸走进校园内。在今年7月满4岁的乔冶正式入读伦敦的私立贵族小学“Thomas’s Battersea”，据外媒报道指出，该小学每年学费就要价17,604镑。同班有19名学生。英国最佳学校指南称该校是都市生活父母的首选，有最佳的英文学习环境，物超所值。",
+					"fabulous":"220",
+					"comment":"79"
+				}
+			]
+		}
+	},
+	{
+		"id":"3001",
+		"sub_img":"img/3001.png",
+		"column":"MONO勃艮第",
+		"type":"创意",
+		"link":"点击type跳转的地址",
+		"img_json":{
+			"src":"img/3002.jpg",
+			"image_dir":"我们拒绝用无聊致死的危险去换取一个免于饥饿的世界。",
+			"dir_position":"middle",
+			"img_title":"我可以踢你一脚吗",
+			"img_describe":"你为什么不冬眠呢？嗯？不是你把我叫醒的吗！"
+		},		
+		"action-bar":{
+			"position": "inner",
+			"fabulous":"334",
+			"comment":"13"
+		},
+		"link-data":{//点击MONO勃艮第跳转页面的数据
+			"banner":"img/3101.jpeg",
+			"subTitle":"你抓不住这个梗，你肯定抓不住！",
+			"list":[
+				{
+					"time":"2017.9.30 17:30",
+					"src":"img/3002.jpg",
+					"image_dir":"乔治小王子要上学了 王妃为他选了这所小学 ",
+					"dir_position":"bottom",
+					"img_title":"我们拒绝用无聊致死的危险去换取一个免于饥饿的世界。 王妃为他选了这所小学 ",
+					"img_describe":"你为什么不冬眠呢？嗯？不是你把我叫醒的吗！ George），将在父母威廉王子和凯特的陪同下开始小学生活，并独自从校门口大闸走进校园内。在今年7月满4岁的乔冶正式入读伦敦的私立贵族小学“Thomas’s Battersea”，据外媒报道指出，该小学每年学费就要价17,604镑。同班有19名学生。英国最佳学校指南称该校是都市生活父母的首选，有最佳的英文学习环境，物超所值。",
+					"fabulous":"150",
+					"comment":"88"
+				},
+				{
+					"time":"2017.9.30 16:55",
+					"src":"img/3102.jpg",
+					"image_dir":"小心的滑 ",
+					"dir_position":"bottom",
+					"img_title":"小心的滑 ",
+					"img_describe":"小心小心",
+					"fabulous":"180",
+					"comment":"80"
+				},
+				{
+					"time":"2017.9.30 16:55",
+					"src":"img/3103.jpg",
+					"image_dir":"纸又不够了 ",
+					"dir_position":"bottom",
+					"img_title":"纸又不够了 ",
+					"img_describe":"可以说是很努力了 ​​​​",
+					"fabulous":"160",
+					"comment":"98"
+				},
+				{
+					"time":"2017.9.30 16:55",
+					"src":"img/3104.jpg",
+					"image_dir":"「你为什么不冬眠呢？」「不是你把我叫醒的吗？！」 ",
+					"dir_position":"bottom",
+					"img_title":"「你为什么不冬眠呢？」「不是你把我叫醒的吗？！」 ",
+					"img_describe":"MONO勃艮第",
+					"fabulous":"365",
+					"comment":"121"
+				}
+			]
+		}
+	},
+	{
+		"id":"4001",
+		"sub_img":"img/4001.png",
+		"column":"动画学术趴",
+		"type":"微信",
+		"link":"点击type跳转的地址",
+		"img_json":{
+			"src":"img/4002.jpg",
+			"image_dir":"他是一位真正的艺术大师，值得被人们铭记",
+			"dir_position":"bottom",
+			"img_title":"他曾经是受尽歧视的底层华裔，最终用中国水墨经验好莱坞",
+			"img_describe":"无数人都曾被迪士尼动画电影《小鹿斑比》所打动，然而在很长一段时间里，却鲜少有人知道电影中那些美妙的画面，出自…………"
+		},		
+		"action-bar":{
+			"position": "out",
+			"fabulous":"531",
+			"comment":"13"
+		},
+		"link-data":{//点击动画学术趴第跳转页面的数据
+			"banner":"img/4101.jpg",
+			"subTitle":"Creepy-husky-dog-face-paint-makeup",
+			"list":[
+				{
+
+					"time":"2017.9.30 17:30",
+					"src":"img/4002.jpg",
+					"image_dir":"他是一位真正的艺术大师，值得被人们铭记学 ",
+					"dir_position":"bottom",
+					"img_title":"他曾经是受尽歧视的底层华裔，最终用中国水墨经验好莱坞",
+					"img_describe":"无数人都曾被迪士尼动画电影《小鹿斑比》所打动，然而在很长一段时间里，却鲜少有人知道电影中那些美妙的画面，出自…………",
+					"fabulous":"150",
+					"comment":"88"
+				},
+				{
+					"time":"2017.9.30 16:55",
+					"src":"img/4102.jpg",
+					"image_dir":"小心的滑 ",
+					"dir_position":"bottom",
+					"img_title":"小心的滑 ",
+					"img_describe":"小心小心",
+					"fabulous":"180",
+					"comment":"80"
+				},
+				{
+					"time":"2017.9.30 16:55",
+					"src":"img/4103.jpg",
+					"image_dir":"纸又不够了 ",
+					"dir_position":"bottom",
+					"img_title":"纸又不够了 ",
+					"img_describe":"可以说是很努力了 ​​​​",
+					"fabulous":"160",
+					"comment":"98"
+				},
+				{
+					"time":"2017.9.30 16:55",
+					"src":"img/4104.jpg",
+					"image_dir":"「你为什么不冬眠呢？」「不是你把我叫醒的吗？！」 ",
+					"dir_position":"bottom",
+					"img_title":"「你为什么不冬眠呢？」「不是你把我叫醒的吗？！」 ",
+					"img_describe":"MONO勃艮第",
+					"fabulous":"365",
+					"comment":"121"
+				}
+			]
+		}		
+	},
+	{
+		"id":"4002",
+		"sub_img":"img/4002.png",
+		"column":"艺术群像",
+		"type":"微信",
+		"link":"点击type跳转的地址",
+		"img_json":{
+			"src":"img/4002.jpg",
+			"image_dir":"巴塔耶：给马奈画像",
+			"dir_position":"bottom",
+			"img_title":"巴塔耶：给马奈画像",
+			"img_describe":"他不仅是一位伟大的画家，他与前人截然区分开来，他打开了我们所生活的时代，与现实的世界相呼应，在他生活的世界……"
+		},		
+		"action-bar":{
+			"position": "out",
+			"fabulous":"531",
+			"comment":"13"
+		}
+	},
+	{
+		"id":"4003",
+		"sub_img":"img/4003.png",
+		"column":"大家",
+		"type":"微信",
+		"link":"点击type跳转的地址",
+		"img_json":{
+			"src":"img/4003.jpg",
+			"image_dir":"因为这样你就不会躲躲闪闪，你就会诚实，坚持自我",
+			"dir_position":"bottom",
+			"img_title":"《大明宫词》的编剧说，言之有物就带来诚实，“可以错，但不隐瞒”",
+			"img_describe":"2017年7月，《大明宫词》再版，封面整面印上了当年的剧照，是17年的周迅来归亚蕾。2000年初，《大明宫词》……"
+		},		
+		"action-bar":{
+			"position": "out",
+			"fabulous":"136",
+			"comment":""
+		}
+	},
+	{
+		"id":"5001",
+		"sub_img":"img/5001.png",
+		"column":"不听歌会死",
+		"type":"其他",
+		"link":"点击type跳转的地址",
+		"img_json":{
+			"src":"",
+			"image_dir":"Like a Dream ",
+			"dir_position":"bottom",
+			"img_title":"关于《心率（Like a dream）》心率的变化，惊鸿一瞥,",
+			"img_describe":"打造这首歌的是一位来自纽约的作曲家和音乐制作人——曲作者 Andrew Underberg ，他曾与山下智久、幸田来未、东方神起等亚洲艺人合作，并为「维多利亚的秘密」打造全部音乐。此次打造的《心率（Like a dream）是一首轻快的R&B情歌，原声吉他“切片”式的演奏混搭经典中速Hiphop律动节奏，有意用熟悉的元素带动偶遇情景中年轻人悸动的情绪共鸣。而鹿晗干净清澈的嗓音不仅极具辨识度，更为歌曲带来了夏末的阳光味道，让人心动。"
+		},
+		"gequ":"",		
+		"action-bar":{
+			"position": "out",
+			"fabulous":"136",
+			"comment":"5"
+		}
+	}
+]

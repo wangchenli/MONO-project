@@ -1,0 +1,43 @@
+body {
+  box-sizing: border-box;
+}
+._interesting {
+  width: 46rem;
+}
+.interest {
+  margin-top: 1.85185185rem;
+  margin-left: 1.2962963rem;
+  border: 0.14814815rem solid #cccccc;
+  padding: 1.11111111rem 1.11111111rem;
+}
+.interest dt {
+  width: 14.81481481rem;
+  height: 20rem;
+  margin-bottom: 1.81481481rem;
+  margin-right: 1.11111111rem;
+}
+.interest dt img {
+  width: 14.81481481rem;
+  height: 20.37037037rem;
+}
+.interest .details {
+  width: 24.44444444rem;
+  height: 20rem;
+}
+.interest .title {
+  margin-bottom: 1.11111111rem;
+}
+.interest h2 {
+  margin-top: 0.51851852rem;
+  font-size: 2.96296296rem;
+  font-family: "微软雅黑";
+  font-weight: 900;
+  color: #494949;
+}
+.interest .doc p {
+  text-align: left;
+  font-size: 1.85185185rem;
+  font-family: "微软雅黑";
+  color: #181818;
+  line-height: 2.96296296rem;
+}

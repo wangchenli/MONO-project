@@ -1,0 +1,67 @@
+https://music.douban.com/subject_search?search_text=%E5%A6%84%E4%B8%BA&cat=1003
+https://music.douban.com/subject_search?search_text=take+me+to+your+heart&cat=1003
+
+https://music.douban.com/v2/music/search
+
+https://music.douban.com/v2/music/search?q=${val}&start=1&count=5&callback=callbackFn`
+
+
+
+			  https://book.douban.com/subject_search?search_text=%E4%B8%87%E4%B8%87%E6%B2%A1%E6%83%B3%E5%88%B0&cat=1001
+script.src = `https://api.douban.com/v2/book/search?q=${val}&start=1&count=5&callback=callbackFn`;
+https://book.douban.com/subject_search?search_text=%E4%B8%87%E4%B8%87%E6%B2%A1%E6%83%B3%E5%88%B0&cat=1001
+
+
+/*
+	接口
+		https://api.douban.com/v2/book/search?q=要搜索的图书&start=开始&count=搜索的个数&callback=回调函数
+*/
+
+https://c.y.qq.com/v8/fcg-bin/getmv_by_tag?g_tk=328229838&loginUin=0&hostUin=0&format=jsonp&inCharset=utf8&outCharset=GB2312&notice=0&platform=yqq&needNewCode=0&cmd=shoubo&lan=all
+
+
+jsonp(`https://c.y.qq.com/v8/fcg-bin/getmv_by_tag?g_tk=328229838&loginUin=0&hostUin=0&format=jsonp&inCharset=utf8&outCharset=GB2312&notice=0&platform=yqq&needNewCode=0&cmd=shoubo&lan=all`,
+    {
+      param: 'jsonpCallback'
+    },function(err,data){
+      console.log(JSON.stringify(data.data,null))
+    });
+
+
+音乐：script.src = `https://api.douban.com/v2/music/search?q=${val}&start=0&count=5&callback=callbackFn`;
+
+首页视频：http://www.iqiyi.com/w_19rr0csmj5.html
+
+
+
+电影：
+  1.//正在热映
+	jsonp(`https://api.douban.com/v2/movie/in_theaters?`,
+            {
+            param: 'callback'
+            },function(err,data){
+                console.log(JSON.stringify(data,null))
+            }
+      )
+
+2.GET /v2/movie/new_movies//新片榜	
+https://api.douban.com/v2/movie/in_theaters
+https://api.douban.com/shuo/v2/statuses/
+
+
+找歌曲信息：（应用的是歌曲提供的接口）
+1.找歌曲的id：
+	http://59.37.96.220/soso/fcgi-bin/client_search_cp?format=json&t=0&inCharset=GB2312&outCharset=utf-8&qqmusic_ver=1302&catZhida=0&p={0}&n={1}&w={2}&flag_qc=0&remoteplace=sizer.newclient.song&new_json=1&lossless=0&aggr=1&cr=1&sem=0&force_zonghe=0
+	{0} :当前页码数，从1开始
+	{1} :每次请求返回的数量
+	{2} :搜索关键词
+2.找歌词：
+	https://api.darlin.me/music/lyric/百度中歌曲id名/?
+
+
+
+图书类：
+Get  https://api.douban.com/v2/book/search?q=要搜索的图书&start=开始&count=搜索的个数&callback=回调函数   //搜索图书
+GET  https://api.douban.com/v2/book/series/:id/books //获取丛书书目信息
+eg: 
+https://api.douban.com/v2/book/series/2308/books 

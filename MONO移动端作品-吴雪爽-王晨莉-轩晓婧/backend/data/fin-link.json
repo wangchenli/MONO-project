@@ -1,0 +1,20 @@
+[
+	{
+		"id":"f-l-001",
+		"sub_img":"f-l-sub001.png",
+		"column":"书单推荐",
+		"describe":{
+			"publicTime":"2017.10.05 17:18 发布",
+			"member":"77387"
+		},
+		"banner":"img.f1-001.png",
+		"title":"MoNo书单|这里的每一册，都可以用三个月读完",
+		"author":"MoNo编辑部",
+		"content":"",
+		"action-bar":{
+			"position": "out",
+			"fabulous":"580",
+			"comment":"82"
+		}
+	}
+]
