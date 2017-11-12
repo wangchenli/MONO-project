@@ -31,7 +31,6 @@ export default {
           //param:'jsonpCallback'
         },
         function(err, data) {
-          console.log(data);
           _this.$store.commit("changeNavData", data);
         }
       );
