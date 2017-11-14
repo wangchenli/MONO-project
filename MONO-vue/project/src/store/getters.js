@@ -11,8 +11,8 @@ const getters =  {
   getCurrentMusic: state => state.musicList[state.currentMusicIndex],
   getplayState: state => state.playState,
   getCurrentSong: state => state.currentSong,
-  getAlertTipShow:state => state.alertTipShow
+  getAlertTipShow:state => state.alertTipShow,
   // 当前歌曲改变时，根据当前歌曲的id拿lyricData里的对应的歌词
-  // getCurrentLyric: state => state.lyricData[state.currentSong.data[0].id]
+  getCurrentLyric: state => state.currentLyric
 }
 export default getters

@@ -1,20 +1,25 @@
 <template>
-	<scroll ref="contentWrapper" :data="this.$store.state.navData.subjects">
+	<scroll ref="contentWrapper" :data="movieList">
 		<div>        
-			<MovieItem v-for="item,index in this.$store.state.navData.subjects" :key="index" :item="item"></MovieItem>                                       
+			<MovieItem 
+        v-if = "movieList"
+        v-for="item,index in movieList" 
+        :key="index" 
+        :item="item" 
+        :index="index"
+      ></MovieItem> 
 		</div>
 	</scroll>
 </template>
 
 <script>
 import Jsonp from "jsonp";
+import api from "@/api/api.js"; // 请求数据的文件
 import MovieItem from "@/views/recommend/movie/movie-item";
 import Scroll from "@/components/scroll/index";
 export default {
   // props: ["nav_data"],
   components: {
-    // FooterNav,
-    // PubNav,
     MovieItem,
     Scroll
   },
@@ -25,15 +30,15 @@ export default {
   methods: {
     getMovieData() {
       let _this = this;
-      Jsonp(
-        `https://api.douban.com/v2/movie/in_theaters`,
-        {
-          //param:'jsonpCallback'
-        },
-        function(err, data) {
-          _this.$store.commit("changeNavData", data);
-        }
-      );
+      api.getMovieData().then(data => {
+        console.log(data.data.data.list.subjects,"get-movie");
+        _this.$store.commit("changeMovieData", data.data);
+      });
+    }
+  },
+  computed:{
+    movieList() {
+      return this.$store.state.movieList; 
     }
   }
 };

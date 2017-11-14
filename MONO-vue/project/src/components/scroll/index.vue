@@ -71,7 +71,6 @@
             }
           })
         }
-
         // 开始滚动前判断
         if (this.beforeScroll) {
           this.scroll.on('beforeScrollStart', () => {

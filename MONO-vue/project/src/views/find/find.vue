@@ -1,23 +1,23 @@
 <template>
   <div>
-	    <div  style="position:relative;">
-			<search
-				@result-click="resultClick"
-				@on-change="getResult"
-				:results="results"
-				v-model="value"
-				position="absolute"
-				auto-scroll-to-top top="46px"
-				@on-focus="onFocus"
-				@on-cancel="onCancel"
-				@on-submit="onSubmit"
-				ref="search"
-			></search>
-			<div ref="searchBtn" :style="searchBtnStyle">
-				<router-link to="/search">
-					<x-button @click.native="setFocus" type="primary">搜索</x-button>
-				</router-link>
-			</div>
+		<div style="position:relative;width:100%;height:5rem;background:#000;">
+				<search
+					@result-click="resultClick"
+					@on-change="getResult"
+					:results="results"
+					v-model="value"
+					position="absolute"
+					auto-scroll-to-top top="46px"
+					@on-focus="onFocus"
+					@on-cancel="onCancel"
+					@on-submit="onSubmit"
+					ref="search"
+				></search>
+				<div ref="searchBtn" :style="searchBtnStyle">
+					<router-link to="/search">
+						<x-button @click.native="setFocus" type="primary">搜索</x-button>
+					</router-link>
+				</div>
 		</div>
 		<scroll ref="contentWrapper">
 			<div class="find findWrapper">
@@ -34,7 +34,7 @@
 							</div>
 						</div>
 					</scroll>
-
+					<!-- <toast v-model="showPositionValue" type="text" :time="800" text="2012，您要访问的页面已上船！" :position="position"></toast> -->
 				</div>
 				<div class="recommend-edit">
 					<h2 class="clearfix more">
@@ -131,7 +131,31 @@
 					<p class="show-all">已显示全部内容</p>
 				</div>            
 			</div>            
-		</scroll>	
+		</scroll>
+		<!-- <div class="seek">
+			<input 
+				type="text"
+				placeholder="搜索你感兴趣的内容"
+				@result-click="resultClick" i
+				@on-change="getResult" 
+				:results="results" 
+				v-model="value" 
+				position="absolute" 
+				auto-scroll-to-top top="46px" 
+				@input="onFocus" 
+				@on-cancel="onCancel"
+				@on-submit="onSubmit" 
+				ref="search"
+			/>
+			<router-link to="/search">
+					<i 
+						class="fa fa-search" 
+						aria-hidden="true"
+						@touchstart.native="setFocus" type="primary"
+					></i>
+			</router-link>					
+		</div> -->
+		
 		<Footer-nav></Footer-nav>
 	</div>
 </template>
@@ -163,6 +187,7 @@ export default {
 		Scroll
 	},
 	computed:{
+		// 搜索按钮的样式
 		searchBtnStyle(){
 			return {'padding-top':'0.75rem','padding-right':'0.8rem','position':'absolute','top':0,'right':0,'width':'5rem','height':'4rem','z-index':99}
 		}
@@ -182,7 +207,6 @@ export default {
 		},
 		resultClick(item) {
 			// window.alert('you click the result item: ' + JSON.stringify(item))
-			console.log(item)
 		},
 		getResult(val) {
 			this.results = val ? getResult(this.value) : []
@@ -196,14 +220,12 @@ export default {
 			})
 		},
 		onFocus() {
-			this.$refs.searchBtn.style.top = '1.7rem'
 			this.$refs.searchBtn.style.right = '3rem'
 			if (this.value !== "") {                
 				this.$store.commit("changeSearchVal", this.value);
 			}
 		},
 		onCancel () {
-			this.$refs.searchBtn.style.top = '0'
 			this.$refs.searchBtn.style.right = '0'
 			console.log('on cancel')
 		},
@@ -216,7 +238,6 @@ export default {
 			this.$store.commit('changeIco', item)
 		}
 	},
-	
 	mounted() {
 		this.$refs.contentWrapper.$el.style.height = window.innerHeight + "px";
 		this.getSubjectTerm()
@@ -232,18 +253,11 @@ function getResult(val) {
 	}
 	return rs
 }
-function getResult (val) {
-  let rs = []
-  for (let i = 0; i < 10; i++) {
-    rs.push({
-      title: `${val} `,
-      other: i
-    })
-  }
-  return rs
-}
 </script>
 <style>
+#app .vux-search-fixed{
+	top:0!important;
+}
 #app button.weui-btn{
 	height:3.4rem;
 	font-size: 1rem;
@@ -273,11 +287,12 @@ function getResult (val) {
     color: #7f7f7f;
 }
 #app .weui-search-bar{
-  width: 46rem;
+  width:100%;
   height: 4.81481481rem;
   padding: 0.74074074rem 1rem;
   background: #232427;
   position: relative;
+	z-index: 99;
 }
 #app .weui-search-bar__form{
    border-radius: 0.37037037rem;
@@ -287,7 +302,7 @@ function getResult (val) {
     line-height: 3.41481481rem;
 }
 #app .weui-search-bar__box{
-    padding-left: 80px;
+    /* padding-left: 80px; */
 }
 #app .weui-search-bar__input{
     width: 36rem;
@@ -297,6 +312,7 @@ function getResult (val) {
     -text-indent: 16.07407407rem;
     font-size: 1.48148148rem;
     color: #7f7f7f;
+		text-indent: 2.5rem;
 }
 #app .weui-icon-clear{
     font-size: 1.85rem;
@@ -310,5 +326,19 @@ function getResult (val) {
 #app .weui-cell{
     height: 80px;
     font-size: 30px;
+}
+.seek{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.vux-search_show {
+    display: none;
+}
+.subject-term .theme{
+    width:70rem;
+}
+.special .theme{
+    width:114rem;
 }
 </style>

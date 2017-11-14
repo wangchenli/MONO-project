@@ -28,6 +28,9 @@ function getLyricData(id,callback){
 function getBooksData(){
     return  axios.get(urls.urls1.books)
 }
+function getMovieData(){
+    return  axios.get(urls.urls1.movie)
+}
 function getSecondData(){
     return  axios.get(urls.urls1.hometitle)
 }
@@ -43,6 +46,7 @@ export default{
     getLyricData,
     getListData,
     getBooksData,
+    getMovieData,
     getSecondData,
     getSubjectTerm,
     getComunityData

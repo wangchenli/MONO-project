@@ -27,7 +27,7 @@
 						<i class="fa fa-heart-o" aria-hidden="true"></i>
 						<span>收藏</span>
 					</li>
-					<li  @touchstart="changePhotoShow">
+					<li  @click="changePhotoShow">
 						<i class="fa fa-picture-o" aria-hidden="true"></i>
 						<span>相册</span>
 					</li>
@@ -41,7 +41,7 @@
 					</router-link>
 				</ul>
 				<div class="photo-box" v-show="photoShow">
-					<i class="fa fa-chevron-left" aria-hidden="true" @touchstart="changeState()">返回</i>
+					<i class="fa fa-chevron-left" aria-hidden="true" @click="changeState()">返回</i>
 					<preview :list="list">
 									
 					</preview>
@@ -52,7 +52,7 @@
 					<b class="fl">3</b>
 					<i class="fa fa-angle-right fr" aria-hidden="true"></i>
 				</router-link>
-				<div class="mine-tool"  @touchstart="show2=true">
+				<div class="mine-tool"  @click="show2=true">
 					<i class="fa fa-shopping-cart fl" aria-hidden="true"></i>
 					<span class="fl">我的订单</span>
 					<i class="fa fa-angle-right fr" aria-hidden="true"></i>

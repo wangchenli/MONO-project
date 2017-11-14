@@ -74,6 +74,7 @@ export default {
 		fnStart(ev){
 			ev = ev.changedTouches[0]; // 触发当前事件的手指列表，取第一个即可
 			this.iStartTouchX = ev.pageX; // 手指按下的坐标
+			console.log(ev,'this.iStartTouchX')
 			this.iStartX = this.target;
 			clearInterval(this.timer1);			
 		},

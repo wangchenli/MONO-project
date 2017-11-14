@@ -7,7 +7,7 @@ import Community from '@/views/community/community'
 import Mine from '@/views/mine/mine'
 import MusicPlayer from '@/views/musicPlayer/musicPlayer'
 import Secondpage from '@/components/second-page/second-page'
-import Alert from '@/views/find/alert'
+import Alert from '@/components/recommend-item/alert'
 import Un from '@/components/404/404'
 import Undefined from '@/components/404/nopage'
 import PubNav from '@/views/recommend/pub-nav/pub-nav'
@@ -68,16 +68,5 @@ export default new Router({
       name:"Search",
       component:Search
     }
-    /* ,
-    {
-      path: '/latalyList',
-      name: 'LatalyList',
-      component: LatalyList
-    },
-    {
-      path: '/musicplayer',
-      name: 'MusicPlayer',
-      component: MusicPlayer
-    } */
   ]
 })

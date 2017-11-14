@@ -19,17 +19,19 @@
              boxNum：代表有几个路由组件
              marginLeft：偏移量
         -->
-		<div :class="[{'shift': isMove},'clearfix']" :style="{width: boxNum * pinWidth + 'px', marginLeft: marginLeft + 'px'}"
-			@touchstart="start($event)"
-			@touchmove="move($event)"
-			@touchend="end($event)"	
-		>
-			<!-- 四个路由组件放置的地方 -->
-			<Tea></Tea>			
-			<Music></Music>
-			<Movie></Movie>
-			<Books></Books>
-		</div>
+    
+      <div :class="[{'shift': isMove},'clearfix']" :style="{width: boxNum * pinWidth + 'px', marginLeft: marginLeft + 'px'}"
+        @touchstart="start($event)"
+        @touchmove="move.call(this,$event)"
+        @touchend="end.call(this,$event)"	
+      >
+        <!-- 四个路由组件放置的地方 -->
+        <Tea></Tea>		
+        <Music></Music>
+        <Movie></Movie>
+        <Books></Books>
+      </div>
+    
 	</div>
 </template>
 
@@ -38,7 +40,9 @@ import Tea from "@/views/recommend/tea";
 import Books from "@/views/recommend/books/books";
 import Music from "@/views/recommend/music/music";
 import Movie from "@/views/recommend/movie/movie";
+import Scroll from "@/components/scroll/index"; // 用来滚动的
 import { mapMutations } from "vuex";
+
 export default {
   data() {
     return {
@@ -58,7 +62,8 @@ export default {
       m_sY: 0,
       e_sX: 0,
       e_xY: 0,
-      sML: 0
+      sML: 0,
+      disY:0
     };
   },
   methods: {
@@ -66,17 +71,35 @@ export default {
       setMPlayerScreen: "setMPlayerScreen"
     }),
     jump(index) {
-      this.index = index;
+      this.index = index
     },
     start(ev) {
       // ev.stopPropagation();
+      let e = ev.changedTouches[0]; // 触发当前事件的手指列表，取第一个即可
+			this.iStartTouchY = e.pageY; // 手指按下的坐标
+      this.iStartTouchX = e.pageX; // 手指按下的坐标
+      this.disY = 0;
+      // console.log(this.disY,'end')
       this.isMove = false;
-      this.startX = ev.changedTouches[0].clientX;
-      this.startY = ev.changedTouches[0].clientY;
+      this.startX = e.clientX;
+      this.startY = e.clientY;
       this.sML = this.marginLeft;
     },
     move(ev) {
-      // ev.stopPropagation();
+      // console.log(ev.changedTouches[0].pageY,'ev.changedTouches[0].pageY')
+      // this.disY = Math.abs(ev.changedTouches[0].pageY)+Math.abs(this.iStartTouchY);	 // 手指在屏幕上移动的纵向距离
+      // let disX = Math.abs(ev.changedTouches[0].pageX) + Math.abs(this.iStartTouchX);	 // 手指在屏幕上移动的横向距离
+      this.disY = Math.abs(ev.changedTouches[0].pageY - this.iStartTouchY)
+      let disX = Math.abs(ev.changedTouches[0].pageX - this.iStartTouchX);
+      //console.log(Math.abs(this.disY),Math.abs(disX),'mmmmmmmmmm')
+      if(this.disY>10){
+        this.$store.commit('setScrollXFlag',false)
+        
+      }else{
+        this.$store.commit('setScrollXFlag',true)
+      }
+      // console.log(this.$store.state.setScrollXFlag,'this.$store.state.setScrollXFlag')
+      if(!this.$store.state.setScrollXFlag) return
       this.moveX = ev.changedTouches[0].clientX;
       this.moveY = ev.changedTouches[0].clientY;
       this.m_sX = this.moveX - this.startX;
@@ -90,7 +113,7 @@ export default {
           : marginLeft;
       this.marginLeft = marginLeft;
     },
-    end(ev) {
+    end(ev) {      
       this.isMove = true;
       if (
         Math.abs(this.m_sX) > Math.abs(this.m_sY) &&
@@ -115,7 +138,8 @@ export default {
     Tea,
     Music,
     Movie,
-    Books
+    Books,
+    Scroll
   },
   watch: {
     index: function(newValue, oldValue) {
@@ -140,7 +164,10 @@ export default {
 .nav .nav-li {
   float: left;
   padding: 0 2rem;
+  width: 8.8rem;
   height: 5.18518519rem;
+  float: left;
+  margin-right: 0.5rem;
 }
 
 .nav .blue {

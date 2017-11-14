@@ -3,19 +3,21 @@ import Vuex from 'vuex'
 import getters from './getters'
 import Base64 from '@/assets/js/base64.js'
 import vuexI18n from 'vuex-i18n';
-
+import musicListInit from '@/assets/js/musicList' // 一开始默认的播放列表
 // 作为vue的插件使用 整个应用要取vuex中的状态
 Vue.use(Vuex)
 
 let store = new Vuex.Store({
-  modules: {  
+  modules: { // 解决VUX组件的$t报错
       i18n: vuexI18n.store  
   },
   state: {
+    scrollXFlag:false, // 是否允许横向滑动
     alertTipShow:false, // 弹框的显示和隐藏
     tipPosition:'default', // 提示信息的位置（定位）
     showPositionValue:false, // 提示信息的显示和隐藏
     bookList:[],
+    movieList:[],//电影列表
     searchVal:"",
     navData:{},//记录点击导航跳转页面获取到的数据
     dynamicState: [],//存动态的数组
@@ -25,37 +27,30 @@ let store = new Vuex.Store({
     comunityData: '',//comunity页面中的数据
     findData: '',  //find页面中存放的数据
     listdata: [], // 下拉更新数据存放数组
-    currentListItemId: null,  // 上拉更多的数据存放数组
+    currentListItemId: null,  // 列表里当前播放歌曲的id
     audioDom:'', //音乐播放元素
     btnDom:'', // 当前小播放条的播放按钮
     progressDom:'', // 当前小播放条的进度条元素
     progerssWidth:0, // 当前小播放条的进度条的宽度，大播放条的进度条宽度和这个保持一致
-    musicList:[/* {
-      "name":"笑忘书",
-      "img":"https://y.gtimg.cn/music/photo_new/T002R150x150M0000001WFLC3cqaQR.jpg?max_age=2592000",
-      "songid":"14361",
-      "singer":"王菲"
-    } */], // 音乐的播放列表
+    musicList:musicListInit, // 音乐的播放列表
     lyricData:{},
     musicIndex:0, // 把请求到的音乐添加到listdata里对应的音乐数据时使用，为了不重复添加，所以依次添加
     AllMusicList:[], // 所有音乐
     playState:false, //播放按钮状态
     mPlayerScreen:false, // 控制音乐播放器页的显示和隐藏，true显示，false隐藏
-    currentTime:0,//音乐播放进度
-    // duration:0,//音乐长度
-    listState:false,//播放列表状态
-    isLoadingShow:false,//是否显示loading
+    currentTime:0,//音乐播放进度，用来计算进度条用的
 		musicDuration: 0,	// 音乐的总播放时长
     currentMusicIndex: 0, // 当前音乐的index索引
     latalyListShow:false, // 控制播放列表的显示和隐藏
-    musicLoadFinish:false,
-    currentSong:null,
-    currentLyric:'',
-    allPlayBtn:null,
+    currentSong:null, // 当前播放的歌曲
+    currentLyric:'', // 当前播放的歌词
     pullLoading:false // 是否下拉刷新
   },
   getters,
   mutations: {
+    setScrollXFlag(state,payload){
+      state.setScrollXFlag = payload;
+    },
     changeToastTipPosition(state,payload){
       state.tipPosition = payload
     },
@@ -72,10 +67,18 @@ let store = new Vuex.Store({
       payload.attentioned = true;
     },
     changeNavData(state,payload){
-      state.navData = payload
+      state.navData = payload                
+    },
+    changeBooksData(state,payload){
       if(payload.data){
         state.bookList = payload.data.list.books
-      }      
+      } 
+    },
+    changeMovieData(state,payload){
+      if(payload.data){//如果有电影的数据
+        //console.log(payload.data.list.subjects,"movieList")
+        state.movieList = payload.data.list.subjects
+      } 
     },
     // 每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler),这个回调函数就是我们实际进行状态更改的地方
     // 定义事件类型changeMusicList，绑定回调函数，回调函数不会立即执行，
@@ -163,6 +166,11 @@ let store = new Vuex.Store({
         }
       })
     },
+    setRandomListData(state){
+      state.listdata.sort(function() {
+        return (0.5-Math.random());
+      })
+    },
     RefreshListData(state,payload){
       // state.listdata = payload;
       let arr = []
@@ -217,19 +225,19 @@ let store = new Vuex.Store({
       state.currentSong = state.musicList[state.currentMusicIndex] // 当前播放的歌曲默认是最新添加到播放列表里的那首
       if(state.currentSong == oldSong) return
       state.audioDom.src= 'http://'+ state.currentSong.url[obj.data[0].id]; // 根据传进来的歌曲信息里的id拿到歌曲地址
+      state.playState=true;
     },
-    setMusicDuration (state, obj) {
-      state.musicDuration = obj.duration
-    },
-    // 设置音乐是否正在加载
-		setMusicLoadStart (state, obj) {
-      state.musicLoadStart = obj.isloadstart
+    setMusicDuration (state, payload) {
+      state.musicDuration = payload
     },
     setCurrentTime (state, time) {
-			state.currentTime = time
+      state.currentTime = time
     },
     setProgressWidth (state) {
-			state.progressDom.style.width = `calc(${(this.getters.getCurrentTime / this.getters.getMusicDuration * 100).toFixed(2)}%)`; 
+      if(state.progressDom){
+        state.progressDom.style.width = `calc(${(this.getters.getCurrentTime / this.getters.getMusicDuration * 100).toFixed(2)}%)`; 
+        // console.log(this.getters.getMusicDuration,'state.progressDom.style.width')
+      }			
     },
     // 通过JSONP拿到数据后，设置播放列表，因为大播放器要拿到别的组件添加的音乐，所以公共的播放列表放在公共的仓库管理
     setAllMusicList(state,payload){
@@ -258,16 +266,7 @@ let store = new Vuex.Store({
     }
   },
   actions:{
-    sendAudio({commit,state},obj){//添加音乐播放元素，在App.vue里在模板编译完成后把audio元素发送给action
-      commit('sendAudio',obj)
-    },
-    // 
-    sendAudio({commit,state},obj){//添加音乐播放元素，在App.vue里在模板编译完成后把audio元素发送给action
-      commit('sendAudio',obj)
-    },
-    set_MusicDuration ({commit}, obj) {
-			commit('setMusicDuration', obj)
-    }
+
   }
 })
 export default store

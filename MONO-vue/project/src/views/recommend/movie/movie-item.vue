@@ -3,10 +3,10 @@
     <section class="searchList clearfix">
       <div class="_interesting fl">
         <dl class="interest fl">
-          <dt class="picture fl">
-            <img src="/static/img/error.jpg">
+          <dt class="picture fl" @click="showPosition('middle')">
+            <img :src = "item.images.large">
           </dt>
-          <dd class="details fl">
+          <dd class="details fl" @click="showPosition('bottom')">
             <div class="title clearfix">
               <h2 class="fl">{{item.title.slice(0,8)}}</h2>
             </div>
@@ -26,7 +26,13 @@
 
 <script>
 export default {
-  props: ["item"]
+  props: ["item"],
+  methods:{
+    showPosition (position) {
+      this.$store.commit('changeToastTipPosition',position)
+      this.$store.commit('changeToastShowPositionValue',true)
+    }
+  }
 };
 </script>
 <style>

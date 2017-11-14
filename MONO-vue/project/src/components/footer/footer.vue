@@ -9,7 +9,7 @@
 					<b>O</b>
 					<span>发现</span>
 			</router-link>
-			<router-link tag="li" class="trans" to="/alert">
+			<router-link tag="li" class="trans" to="/community">
 					<b>N</b>
 					<span>社区</span>
 			</router-link>

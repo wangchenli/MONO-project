@@ -3,14 +3,14 @@
 		<div>
 			<div class="kink4 same" v-for="item,index in this.$store.state.AllMusicList " :key="index">
 				<!-- 这里是每个推荐模块的头部 -->
-				<div class="clearfix creater">
+				<div class="clearfix creater" @touchstart="showPosition('bottom')">
 					<img src="/static/img/5001.png" class="fl"/>
 					<h2 class="fl" >不听歌会死</h2>
 					<span class="fr" @click="showPosition('bottom')">
 						<i class="fa fa-link fa-rotate-90" aria-hidden="true"></i>
 						音乐
 					</span>
-					<toast ref="w" v-model="showPositionValue" type="text" :time="1000" text="雾霾太大，连页面都看不到了" :position="position">{{ $t('Basic Usage') }}</toast>
+					<!-- <toast ref="w" v-model="showPositionValue" type="text" :time="500" text="雾霾太大，连页面都看不到了" :position="position">{{ $t('Basic Usage') }}</toast> -->
 				</div>
 				<!-- 这里是每个推荐模块的中间部分，结构进行定制，在这里放一个插槽 -->
 				<!-- <slot name="middle-slot">
@@ -19,14 +19,14 @@
 					</div>
 				</slot> -->
 				<!-- <div id="m" ref="m"></div> -->
-				<div class="category" >
-					<div class="topic">
+				<div class="category">
+					<div class="topic" @click="showPosition('middle')">
 						<!-- <preview :list="[{'src':'https://y.gtimg.cn/music/photo_new/T002R300x300M000'+item.data[0].album.mid+'.jpg?max_age=2592000',w:1000,h:1000}]"> -->
 						<img :src="'https://y.gtimg.cn/music/photo_new/T002R300x300M000'+item.data[0].album.mid+'.jpg?max_age=2592000'"/>
 						<!-- </preview> -->
 											
 					</div>
-					<div class="clearfix">
+					<div class="clearfix" @click="showPosition('bottom')">
 						<h2 class="fl" style="margin-right:5rem;font-size:2rem;">{{item.data[0].name}}</h2>
 						<p class="article fl" style="font-size:2rem;  line-height:3.7037037rem;padding-top: 1.48148148rem;">{{item.data[0].singer[0].title}}</p>
 						<p class="fr"  style="margin-right:0.5rem; line-height:3.7037037rem;font-size:1.7rem;padding-top: 1.48148148rem;">{{item.data[0].album.time_public}}</p>
@@ -71,9 +71,14 @@ export default {
     this.getdatalist();
   },
   methods: {
-    showPosition(position) {
-      this.position = position;
-      this.showPositionValue = true;
+    // showPosition(position) {
+    //   this.position = position;
+    //   this.showPositionValue = true;
+    // },
+    // 提示信息的显示和隐藏
+    showPosition (position) {
+      this.$store.commit('changeToastTipPosition',position)
+      this.$store.commit('changeToastShowPositionValue',true)
     },
     getdatalist() {
       api.getAllMusicListData(this.getAllMusicListDataCallBack.bind(this));

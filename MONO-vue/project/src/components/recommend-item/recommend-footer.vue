@@ -3,14 +3,14 @@
 		<ul class="function clearfix">
 			<li class="fl fa fa-share-square-o" aria-hidden="true" @click="fn">                             
 			</li>
-			<li @touchstart="collect()" :class="['fa','fa-heart-o',{'red':itemData.actionBar.isCollect}]" aria-hidden="true"></li>
-			<li @touchstart="liked()" :class="['fa','fa-thumbs-o-up',{'blue':itemData.actionBar.thumbsUp}]" aria-hidden="true">
+			<li @click="collect()" :class="['fa','fa-heart-o',{'red':itemData.actionBar.isCollect}]" aria-hidden="true"></li>
+			<li @click="liked()" :class="['fa','fa-thumbs-o-up',{'blue':itemData.actionBar.thumbsUp}]" aria-hidden="true">
 					<span>{{itemData.actionBar.fabulous}}</span>
 			</li>
-			<li class="fa fa-commenting-o" aria-hidden="true" @touchstart="showPosition('bottom')">
+			<li class="fa fa-commenting-o" aria-hidden="true" @click="showPosition('bottom')">
 					<span>{{itemData.actionBar.comment}}</span>
 			</li>
-			<li class="fa fa-ellipsis-h fr lastone" aria-hidden="true" @touchstart="showPosition('bottom')"></li>
+			<li class="fa fa-ellipsis-h fr lastone" aria-hidden="true" @click="showPosition('bottom')"></li>
 		</ul>        
 	</div>    
 </template>

@@ -6,12 +6,16 @@
     <!-- 最近播放的音乐列表 -->
     <lataly-list></lataly-list>
     <!-- 音频标签 -->
-    <audio src="" ref="audio" autoplay="autoplay" @canplay="musicCanPlay"  @timeupdate="musicTimeUpdate" preload @ended="musicEnded">
+    <!-- 
+      src:要播放的音频的 URL；autoplay：音频在就绪后马上播放。canplay 事件：当浏览器能够开始播放指定的音频/视频时，发生 canplay 事件。 
+      timeupdate事件：在音频/视频（audio/video）的播放位置发生改变时触发。
+    -->
+    <audio src="" ref="audio" autoplay="autoplay" @canplay="musicCanPlay"  @timeupdate="musicTimeUpdate">
     </audio>
     <!-- VUX弹框组件 -->
     <actionsheet v-model="show7" :menus="menu7" theme="android" @on-click-menu="click"></actionsheet>
     <!-- VUX提示组件 -->
-    <toast ref="w" v-model="showPositionValue" type="text" :time="5000" text="师傅，数据被妖怪抓走了" :position="position">{{ $t('Basic Usage') }}</toast>
+    <toast ref="w" v-model="showPositionValue" type="text" :time="2000" text="师傅，数据被妖怪抓走了" :position="position">{{ $t('Basic Usage') }}</toast>
   </div>
 </template>
 
@@ -112,27 +116,24 @@ export default {
       this.show7 = flag;
     },
     musicCanPlay() {
-      this.$store.dispatch({
-        type: "set_MusicDuration",
-        duration: Math.floor(this.$refs.audio.duration)
-      });
+      // duration 属性返回当前音频的长度，以秒计。
+      this.$store.commit('setMusicDuration', Math.floor(this.$refs.audio.duration))
     },
     // 音乐播放时间更新事件
     musicTimeUpdate() {
       // 实时更新公共的currentTime状态
+      // currentTime 属性设置或返回音频播放的当前位置（以秒计）。
       this.$store.commit(
         "setCurrentTime",
         Math.floor(this.$refs.audio.currentTime)
       );
       // 修改进度条宽度
       this.$store.commit("setProgressWidth");
-    },
-    // 音乐播放结束后触发
-    musicEnded() {}
+    }
   },
   mounted() {
     // 把audio元素发送给公共的audioDom状态
-    this.$store.dispatch("sendAudio", this.$refs.audio);
+    this.$store.commit('sendAudio', this.$refs.audio)
   }
 };
 </script>
@@ -230,7 +231,7 @@ export default {
   letter-spacing: 0.15rem;
   color: #ffffff;
   text-align: center;
-  background-size:5.61rem 5.61rem!important;
+  background-size: 5.61rem 5.61rem !important;
 }
 #app .weui-actionsheet__cell:before {
   border-top: 0;

@@ -3,6 +3,7 @@ let baseUrl = 'http://localhost:3200/api'
 let urls1 = {
     listData: '/users',
     books:"/books",
+    movie:"/movie",
     hometitle:"/hometitle",
     find:"/find",
     comunity:'/comunity'
@@ -10,12 +11,8 @@ let urls1 = {
 for(var attr in urls1){
     urls1[attr] = baseUrl + urls1[attr]
 }
-let urls2 = {
-    movie:"https://api.douban.com/v2/movie/in_theaters",
-}
 
 
 export default {
-    urls1,
-    urls2
+    urls1
 };

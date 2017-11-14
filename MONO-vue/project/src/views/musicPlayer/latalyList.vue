@@ -1,5 +1,6 @@
 <template>
   <transition name="swing">
+		<!-- latalyListShow决定播放列表的显示隐藏 -->
     <div class="lataly-play" v-show="this.$store.state.latalyListShow">
 			<h2 class="clearfix music-title">
 				<i class="fl fa fa-chevron-left" aria-hidden="true"  @touchstart="setLatalyListShow(false)"></i>
@@ -12,7 +13,9 @@
 					<span class="fl">播放全部歌曲</span>
 				</p>
 				<ul class="music-list">
-					<li v-for="item,index in this.$store.state.musicList" @touchstart="selectSong(item,index)">
+					<!-- 播放列表根据musicList生成 -->
+					<!-- 点击li，执行selectSong切换歌曲；如果index和currentLi相等，那么这个li就高亮 -->
+					<li v-for="(item,index) in this.$store.state.musicList" :key="index" @click="selectSong(item,index)" :class="{active:index === currentLi}">
 							<h2>{{item.data[0].name}}</h2>
 							<p><span>{{item.data[0].singer[0].name}}</span>●来自主<em>不听歌会死</em>主题站</p>
 					</li>
@@ -22,18 +25,27 @@
   </transition>
 </template>
 <script>
-import { mapGetters, mapMutations, mapActions } from 'vuex'
+import {  mapMutations } from 'vuex'
 
 export default {
-  methods: {
-    ...mapMutations({
+	data(){
+		return {
+			currentLi:null
+		}
+	},	
+	methods:{
+		...mapMutations({
 			// 根据状态控制列表的显示和隐藏
-			setLatalyListShow: 'setLatalyListShow'
-    }),
-    selectSong(item,index){
-			this.$store.commit('setCurrentMusicIndex',index);          
-    },
-  }
+			setLatalyListShow: 'setLatalyListShow' // 将this.setLatalyListShow() 映射为 this.$store.commit('setLatalyListShow')
+		}),
+		// 点击列表里的歌名，切换歌曲
+		selectSong(item,index){
+			// 通过setCurrentMusicIndex修改当前音乐的下标，来修改当前音乐currentSong，currentSong改变，会自动获取对应的歌词
+			this.$store.commit('setCurrentMusicIndex',index);
+			// 设置currentLi，用来使当前被点击的li高亮
+			this.currentLi = index;
+		}
+	}
 }
 </script>
 <style scoped="scoped">
@@ -85,6 +97,9 @@ export default {
 .swing {
 transform-origin: top center;
 animation-name: swing;
+}
+.music-list li.active h2{
+	color:#0e7088;
 }
 </style>
 

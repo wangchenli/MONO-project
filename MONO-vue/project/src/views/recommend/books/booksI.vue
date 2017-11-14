@@ -29,13 +29,13 @@ export default {
     getBooksData() {
       let _this = this;
       api.getBooksData().then(data => {
-        _this.$store.commit("changeNavData", data.data);
+        _this.$store.commit("changeBooksData", data.data);
       });
     }
   },
   computed: {
     bookList() {
-      return this.$store.state.bookList;
+      return this.$store.state.bookList;   
     }
   }
 };

@@ -14,8 +14,8 @@
 						<i class="fa fa-quote-left" aria-hidden="true"></i>
 				</div>							
 			</div>
-			<h2>{{this.itemData.img_json.img_title}}</h2>
-			<p class="article">{{this.itemData.img_json.img_describe}}</p>
+			<h2 @click="showPosition('bottom')">{{this.itemData.img_json.img_title}}</h2>
+			<p class="article" @click="showPosition('bottom')">{{this.itemData.img_json.img_describe}}</p>
 			<p class="border-bottom"></p>
 		</div>
 		<div class="banner" v-if="this.itemData.type === '创意'">
@@ -29,8 +29,8 @@
 				</preview>
 				<re-play-bar :index="this.index" :itemData="this.itemData" :type="type"></re-play-bar>						
 			</div>
-			<h2>{{this.itemData.img_json.img_title}}</h2>
-			<p class="article">{{this.itemData.img_json.img_describe}}</p>
+			<h2 @click="showPosition('bottom')">{{this.itemData.img_json.img_title}}</h2>
+			<p class="article" @click="showPosition('bottom')">{{this.itemData.img_json.img_describe.slice(0,90) +'...'}}</p>
 			<p class="border-bottom"></p>
 		</div>
 	</div>
@@ -59,6 +59,13 @@ export default {
 		songImg(){
 				return `https://y.gtimg.cn/music/photo_new/T002R300x300M000${this.itemData.music[0].data[0].album.mid}.jpg?max_age=2592000`
 		}
+	},
+	methods:{
+		// 无数据的提醒
+    showPosition (position) {
+      this.$store.commit('changeToastTipPosition',position)
+      this.$store.commit('changeToastShowPositionValue',true)
+    }
 	}
 }
 </script>
