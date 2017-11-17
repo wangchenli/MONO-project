@@ -7,11 +7,13 @@
       	<!--播放按钮  -->
 			<i aria-hidden="true" @touchstart="play(index)" :class="playBtnCls" ref="playBtn"></i>
       <!-- 进度条 -->
-			<span class="currentProgress" ref="currentProgress" :style="{'width':progressWidth}"></span>
+      <span class="progressWrapper">
+			  <span class="currentProgress" ref="currentProgress" :style="{'width':progressWidth}"></span>
+      </span>
       <!-- 歌名 -->
 			<span  v-if="this.itemData.music">{{this.musicName}}</span>
       <!-- 刚打开页面，显示歌曲的总时长；点击播放时，显示歌曲的“当前播放时间” -->
-			<em class="fr">
+			<em class="fr song-time">
 				{{timerFomart(musicDuration)}}
 				<i class="fa fa-music" aria-hidden="true"></i>
 			</em>
@@ -125,6 +127,27 @@ export default {
   left: 5.7rem;
   background-color: skyblue;
   z-index: -1;
+}
+.kind4 .topic p i{
+  float: left;
+  padding-left:1.5rem;
+  margin-right:0.5rem;
+}
+.kind4 .progressWrapper{
+  width:37.889rem;
+  /* height: 5.92592593rem;
+  position: relative;
+  float: left;   */
+  height: 5.92592593rem;
+  position: absolute;
+  top: 0;
+  left: 5rem;
+}
+.kind4 .music-test .currentProgress{
+  left: 0;
+}
+.kind4 .song-time{
+  margin-right: 1rem;
 }
 </style>
 

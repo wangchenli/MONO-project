@@ -261,6 +261,16 @@ let store = new Vuex.Store({
     setCurrentLyric(state,payload){
       state.currentLyric = payload
     },
+    musicEnded(state,src){
+      state.playState = false;
+      state.listdata.forEach((item)=>{
+        if(item.type === '音乐'){
+          if(item.music[0].url[item.music[0].data[0].id] = src){
+            item.isPlay = false;
+          }
+        }        
+      })
+    },
     setPullLoading(state,payload){
       state.pullLoading = payload
     }

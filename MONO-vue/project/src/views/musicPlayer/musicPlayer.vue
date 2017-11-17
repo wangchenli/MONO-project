@@ -622,13 +622,13 @@ export default {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  width: 34rem;
+  width: 32.6rem;
   height: 0.6rem;
   border-radius: 0.5rem;
   /* border-bottom: 0.5rem solid #666666; */
   background-color: #666666;
   /* background: hsla(0,0%,96%,.3); */
-  margin: 1.85185185rem auto 0;
+  margin: 1.85185185rem 0 0 0.8rem;
   padding-top: 0;
   font-size: 0;
   cursor: pointer;

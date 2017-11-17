@@ -10,7 +10,7 @@
       src:要播放的音频的 URL；autoplay：音频在就绪后马上播放。canplay 事件：当浏览器能够开始播放指定的音频/视频时，发生 canplay 事件。 
       timeupdate事件：在音频/视频（audio/video）的播放位置发生改变时触发。
     -->
-    <audio src="" ref="audio" autoplay="autoplay" @canplay="musicCanPlay"  @timeupdate="musicTimeUpdate">
+    <audio src="" ref="audio" autoplay="autoplay" @canplay="musicCanPlay"  @timeupdate="musicTimeUpdate" @ended="musicEnded">
     </audio>
     <!-- VUX弹框组件 -->
     <actionsheet v-model="show7" :menus="menu7" theme="android" @on-click-menu="click"></actionsheet>
@@ -129,6 +129,12 @@ export default {
       );
       // 修改进度条宽度
       this.$store.commit("setProgressWidth");
+    },
+    // 音乐停止
+    musicEnded(){
+      // 修改playState
+      this.$store.commit('musicEnded',this.$refs.audio.src)
+      // 修改isPlay
     }
   },
   mounted() {
