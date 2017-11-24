@@ -10,7 +10,7 @@
               <el-table-column label="金额" prop="price"></el-table-column>
               <el-table-column label="操作" fixed="right">
                 <template scope="scope">
-                  <el-button type="text" size="small">删除</el-button>
+                  <el-button type="text" size="small" @click="delSingleGoods(scope.row)">删除</el-button>
                   <el-button type="text" size="small">增加</el-button>       
                 </template>
               </el-table-column>
@@ -21,8 +21,8 @@
             </div> 
             <div class="div-btn">
               <el-button type="warning">挂单</el-button>
-              <el-button type="danger">删除</el-button>
-              <el-button type="success">结账</el-button>
+              <el-button type="danger" @click="delAllGoods()">删除</el-button>
+              <el-button type="success" @click="checkout()">结账</el-button>
             </div>         
           </el-tab-pane>
           <el-tab-pane label="挂单">
@@ -133,9 +133,7 @@
       document.getElementById('order-list').style.height = orderHeight + 'px';
     },
     methods:{
-      addOrderList(item){
-        this.totalCount=0; //汇总数量清0
-        this.totalMoney=0;
+      addOrderList(item){        
         let isHave = false;
         //判断是否这个商品已经存在于订单列表
         for(var i=0; i<this.tableData.length; i++){
@@ -155,10 +153,40 @@
           };
           this.tableData.push(newGoods)
         }
-        this.tableData.forEach((i) => {
-          this.totalCount += i.count; //汇总数量清0
-          this.totalMoney += i.price*i.count;
-        })
+        this.allMoney()
+      },
+      delSingleGoods(goods){
+        // console.log(goods)
+        this.tableData = this.tableData.filter(o => o.goodsId != goods.goodsId)
+        this.allMoney()
+      },
+      allMoney(){
+        this.totalCount=0; //汇总数量清0
+        this.totalMoney=0;
+        if(this.tableData){
+          this.tableData.forEach((i) => {
+            this.totalCount += i.count; //汇总数量清0
+            this.totalMoney += i.price*i.count;
+          })
+        }        
+      },
+      delAllGoods(){
+        this.tableData = [];
+        this.totalCount=0; //汇总数量清0
+        this.totalMoney=0;
+      },
+      checkout(){
+        if(this.totalCount != 0){
+          this.tableData = [];
+          this.totalCount=0; //汇总数量清0
+          this.totalMoney=0;
+          this.$message({
+            message:'结账成功！',
+            type:'success'
+          })
+        }else{
+          this.$message.error('不能空结！')
+        }
       }
     }
   }
